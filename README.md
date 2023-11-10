@@ -1,5 +1,5 @@
 # Getting Started with Create React App
-![image](https://github.com/PawanSirsat/React-Journey/assets/48860105/06f15106-f305-4f22-94e0-df17d9bed2c8)
+![image](https://github.com/PawanSirsat/React-Journey/assets/48860105/5c71bc49-f720-4cc7-9b0f-327a3ccf6b36)
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
