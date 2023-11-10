@@ -4,7 +4,6 @@
 @borderLeftColor: #58b5fc;
 .content {
   flex-grow: 1;
-  padding: 20px;
   box-sizing: border-box;
 }
 .flex-container {
@@ -29,10 +28,6 @@
 .navbar__list {
   margin-left: -42px;
   list-style-type: none;
-}
-
-#root {
-  text-align: center;
 }
 
 .logo {
@@ -71,6 +66,8 @@
   color: #888;
 }
 .activenav {
+  display: flex;
+
   box-shadow: 0 0 0.5rem #6f6f70;
   border-radius: 10px;
   padding: 4px;
@@ -81,16 +78,17 @@
   position: relative;
   top: 2.5px;
   font-size: 16px;
-  letter-spacing: 0px;
-  line-height: 38px;
+  letter-spacing: 2px;
+  line-height: 12px;
   color: rgb(39, 39, 39);
   font-family: 'Lato';
   font-weight: bold;
 }
 .navbar__li-box:first-child {
-  margin-top: 53px;
+  margin-top: 25px;
 }
 .navbar__li-box {
+  display: flex;
   height: 55px;
   margin-top: 15px;
   transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */

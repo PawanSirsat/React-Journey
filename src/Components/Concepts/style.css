@@ -1,21 +1,25 @@
 .container {
-  display: flex; /* Use flexbox for layout */
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
 }
-
-/* Left side div */
-.left-div {
-  flex: 1; /* Take up available space */
-  background-color: #e0e0e0; /* Example background color */
-  padding: 20px; /* Example padding */
+.App {
+  text-align: center;
 }
-
-/* Right side div */
+.left-div,
 .right-div {
-  width: 200px; /* Fixed width for the right div */
-  background-color: #f0f0f0; /* Example background color */
-  padding: 20px; /* Example padding */
+  flex: 1; /* Each div takes up equal space */
+  box-sizing: border-box; /* Include padding and border in total width */
+  padding: 20px;
 }
-.right-div li {
+
+@media (max-width: 768px) {
+  .left-div,
+  .right-div {
+    flex: 100%; /* Each div takes up 100% width on small screens */
+  }
+}
+.right-div li,
+h5 {
   list-style: none;
   text-align: left;
 }

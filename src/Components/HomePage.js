@@ -1,5 +1,7 @@
 import React from 'react'
 import './Home.css' // Import your CSS file
+import logo from '../logo.svg'
+import '../App.css'
 
 const Home = () => (
   <div className='home'>
@@ -7,6 +9,7 @@ const Home = () => (
       <header>
         <h1>Welcome to My React Learning Project</h1>
       </header>
+      <img src={logo} className='App-logo' alt='logo' />
 
       <section>
         <h2>About this Project</h2>

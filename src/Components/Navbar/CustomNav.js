@@ -23,7 +23,7 @@ const Exit = () => {
 }
 
 function CustomNav() {
-  const [isWindowOpen, setWindow] = useState(true)
+  const [isWindowOpen, setWindow] = useState(false)
 
   const [currentPage, setCurrentPage] = useState('/replace') // 'home' is the default active page
 

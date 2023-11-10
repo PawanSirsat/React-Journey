@@ -45,7 +45,9 @@ function Replace() {
           <h5>List Of Student</h5>
           {Object.values(users).map((element, index) => (
             <ul key={index}>
-              <li>{element.name}</li>
+              <li>
+                {1 + index} {element.name}
+              </li>
             </ul>
           ))}
         </div>

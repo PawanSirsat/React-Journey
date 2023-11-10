@@ -8,6 +8,7 @@ import Navbar from './Components/Navbar/Navbar'
 import Signup from './Components/Login/Signup-form'
 import CustomNav from './Components/Navbar/CustomNav'
 import ReactDOM from 'react-dom'
+import './App.css'
 const root1 = ReactDOM.createRoot(document.getElementById('root'))
 
 const Change = () => {
