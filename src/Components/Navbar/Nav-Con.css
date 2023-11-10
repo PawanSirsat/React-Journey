@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@backgroundColor: white;
+@textcolor: #000000;
+@borderLeftColor: #58b5fc;
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.flex-container {
+  display: flex;
+}
+.navbar-menu {
+  text-align: left;
+
+  height: 100vh;
+  background-color: backgroundColor;
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.15);
+  transition: all 0.5s ease;
+}
+.burger {
+  display: flex;
+  justify-content: flex-end;
+}
+.burger img {
+  padding: 26px 16px 0px 0px;
+  cursor: pointer;
+}
+.navbar__list {
+  margin-left: -42px;
+  list-style-type: none;
+}
+#root {
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.navbar__li {
+  display: inline-block;
+  padding: 0px 0px 0px 12px;
+  position: relative;
+  top: 2.5px;
+  font-size: 16px;
+  letter-spacing: 0px;
+  line-height: 38px;
+  color: rgb(39, 39, 39);
+  font-family: 'Lato';
+  font-weight: bold;
+}
+.navbar__li-box:first-child {
+  margin-top: 53px;
+}
+.navbar__li-box {
+  height: 43px;
+  margin-top: 15px;
+}
+.navbar__li-box:hover {
+  border-left: 7px solid borderLeftColor;
+  cursor: pointer;
+}
