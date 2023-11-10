@@ -1,0 +1,21 @@
+.container {
+  display: flex; /* Use flexbox for layout */
+}
+
+/* Left side div */
+.left-div {
+  flex: 1; /* Take up available space */
+  background-color: #e0e0e0; /* Example background color */
+  padding: 20px; /* Example padding */
+}
+
+/* Right side div */
+.right-div {
+  width: 200px; /* Fixed width for the right div */
+  background-color: #f0f0f0; /* Example background color */
+  padding: 20px; /* Example padding */
+}
+.right-div li {
+  list-style: none;
+  text-align: left;
+}

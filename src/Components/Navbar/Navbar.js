@@ -23,30 +23,31 @@ const navLinkStyle = {
 
 function Navbar() {
   return (
-    <nav style={navbarStyle}>
-      <div style={logoStyle}>React Practice</div>
-      <ul style={navLinkStyle}>
-        <li>
-          <a href='/' style={{ color: 'white', textDecoration: 'none' }}>
+    <nav class='navbar navbar-expand-lg navbar-dark bg-dark'>
+      <a class='navbar-brand' href='#'>
+        React Journey
+      </a>
+      <button
+        class='navbar-toggler'
+        type='button'
+        data-toggle='collapse'
+        data-target='#navbarNavAltMarkup'
+        aria-controls='navbarNavAltMarkup'
+        aria-expanded='false'
+        aria-label='Toggle navigation'
+      >
+        <span class='navbar-toggler-icon'></span>
+      </button>
+      <div class='collapse navbar-collapse' id='navbarNavAltMarkup'>
+        <div class='navbar-nav'>
+          <a class='nav-item nav-link active' href='/'>
             Home
           </a>
-        </li>
-        <li>
-          <a href='/concept' style={{ color: 'white', textDecoration: 'none' }}>
-            React Concepts
+          <a class='nav-item nav-link' href='/concept'>
+            Chapter 1
           </a>
-        </li>
-        <li>
-          <a href='/login' style={{ color: 'white', textDecoration: 'none' }}>
-            Login
-          </a>
-        </li>
-        <li>
-          <a href='/signup' style={{ color: 'white', textDecoration: 'none' }}>
-            Signup
-          </a>
-        </li>
-      </ul>
+        </div>
+      </div>
     </nav>
   )
 }

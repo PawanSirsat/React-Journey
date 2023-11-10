@@ -1,13 +1,7 @@
 // CustomNav.js
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  Routes,
-  useNavigate,
-} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom'
 import './Nav-Con.css'
 import Replace from '../Concepts/Replace'
 import App from '../../App'
@@ -31,12 +25,20 @@ const Exit = () => {
 function CustomNav() {
   const [isWindowOpen, setWindow] = useState(true)
 
+  const [currentPage, setCurrentPage] = useState('/replace') // 'home' is the default active page
+
+  const handleNavItemClick = (page) => {
+    setCurrentPage(page)
+  }
+
   const li = [
     [
       'Fetch Data',
       'https://img.icons8.com/color/48/dashboard-layout.png',
       '/replace',
     ],
+    ['Login', 'https://img.icons8.com/color/48/authentication.png', '/login'],
+
     ['Hooks', 'https://img.icons8.com/color/48/webhook.png', '/hooks'],
     ['Exit', 'https://img.icons8.com/color/48/back--v1.png', '/exit'],
 
@@ -60,7 +62,13 @@ function CustomNav() {
           </div>
           <ul className='navbar__list'>
             {li.map((item, i) => (
-              <div className='navbar__li-box' key={i}>
+              <div
+                key={i}
+                className={` ${
+                  currentPage === item[2] ? 'activenav' : ''
+                } navbar__li-box`}
+                onClick={() => handleNavItemClick(item[2])}
+              >
                 <Link to={item[2]}>
                   <img
                     src={item[1]}

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './style.css'
 
 function Replace() {
   const users = {
@@ -33,9 +34,23 @@ function Replace() {
 
   return (
     <>
-      <h2>Enter Name For data</h2>
-      <input type='text' value={inputValue} onChange={handleInputChange} />
-      <input type='submit' value='Submit' onClick={handleSubmit} />
+      <div class='container'>
+        <div class='left-div'>
+          <h2>Enter Name For data</h2>
+          <input type='text' value={inputValue} onChange={handleInputChange} />
+          <input type='submit' value='Submit' onClick={handleSubmit} />
+        </div>
+
+        <div class='right-div'>
+          <h5>List Of Student</h5>
+          {Object.values(users).map((element, index) => (
+            <ul key={index}>
+              <li>{element.name}</li>
+            </ul>
+          ))}
+        </div>
+      </div>
+
       {userData && (
         <div>
           <h3>User Data:</h3>

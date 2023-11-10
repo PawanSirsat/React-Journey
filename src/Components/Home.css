@@ -1,0 +1,29 @@
+.home {
+  min-height: 92vh; /* Ensure the content takes at least the full height of the viewport */
+  display: flex;
+  flex-direction: column;
+  font-family: 'Arial', sans-serif;
+}
+
+.con1 {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #eee;
+  border-radius: 5px;
+  margin-top: auto; /* Push the footer to the bottom */
+}
