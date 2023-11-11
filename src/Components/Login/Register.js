@@ -1,9 +1,9 @@
-import { Link, useNavigate } from 'react-router-dom'
 import React, { useState } from 'react'
 import { account } from '../Config/Appwrite'
+import { ID } from 'appwrite'
 
-const Login = () => {
-  const navigate = useNavigate()
+const SignupPage = () => {
+  const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
@@ -11,21 +11,26 @@ const Login = () => {
     event.preventDefault()
 
     try {
-      const response = await account.createEmailSession(email, password)
+      const response = await account.create(ID.unique(), email, password, name)
       console.log(response)
-      alert('Login successful!')
-      navigate('/home')
+      alert('Signup successful!')
     } catch (error) {
-      console.log(error)
+      console.error(error)
+      alert('Signup failed. Please check your input and try again.')
     }
   }
 
   return (
-    <div className='login'>
-      <h2>Login</h2>
-      <br />
-
+    <div className='signup'>
+      <h2>Signup</h2>
       <form onSubmit={handleSubmit}>
+        <input
+          placeholder='Name'
+          type='text'
+          value={name}
+          onChange={(event) => setName(event.target.value)}
+        />
+        <br />
         <input
           placeholder='Email'
           type='email'
@@ -33,7 +38,6 @@ const Login = () => {
           onChange={(event) => setEmail(event.target.value)}
         />
         <br />
-
         <input
           placeholder='Password'
           type='password'
@@ -41,10 +45,10 @@ const Login = () => {
           onChange={(event) => setPassword(event.target.value)}
         />
         <br />
-        <button type='submit'>Login</button>
+        <button type='submit'>Signup</button>
       </form>
     </div>
   )
 }
 
-export default Login
+export default SignupPage
