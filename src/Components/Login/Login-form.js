@@ -14,7 +14,7 @@ const Login = () => {
       const response = await account.createEmailSession(email, password)
       console.log(response)
       alert('Login successful!')
-      navigate('/home')
+      navigate('/welcome')
     } catch (error) {
       console.log(error)
     }

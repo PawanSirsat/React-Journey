@@ -12,6 +12,7 @@ import Home from '../HomePage'
 import Login from '../Login/Login-form'
 import Hooks from '../Concepts/Hooks'
 import Register from '../Login/Register'
+import Welcome from '../Concepts/Welcome'
 
 const root2 = ReactDOM.createRoot(document.getElementById('root'))
 
@@ -44,7 +45,6 @@ function CustomNav() {
       'https://img.icons8.com/cotton/48/create-new--v6.png',
       '/signup',
     ],
-
     ['Hooks', 'https://img.icons8.com/color/48/webhook.png', '/hooks'],
     ['Exit', 'https://img.icons8.com/color/48/back--v1.png', '/exit'],
 
@@ -102,6 +102,7 @@ function CustomNav() {
             <Route path='/login' element={<Login />} />
             <Route path='/home' element={<Home />} />
             <Route path='/signup' element={<Register />} />
+            <Route path='/welcome' element={<Welcome />} />
           </Routes>
         </div>
       </div>
