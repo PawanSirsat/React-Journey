@@ -49,7 +49,6 @@ export const AuthProvider = ({ children }) => {
         userInfo.password1,
         userInfo.name
       )
-
       await account.createEmailSession(userInfo.email, userInfo.password1)
       let accountDetails = await account.get()
       setUser(accountDetails)
